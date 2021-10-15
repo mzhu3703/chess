@@ -4,8 +4,8 @@ import Tile from './Tile'
 
 function Chessboard(){
 
-    const horizontalCoord = ["a", "b", "c", "d", "e", "f", "g", "h"]
-    const verticalCoord = ["1","2","3","4","5","6","7","8"]
+    const horizontalCoord = [1, 2, 3, 4, 5, 6, 7, 8]
+    const verticalCoord = [1,2,3,4,5,6,7,8]
 
     let board = []
     
@@ -14,7 +14,7 @@ function Chessboard(){
             //if the coordinate is even, dark tile
             //odd coordinate white tile 
             const number = j + i + 2
-            board.push(<Tile number = {number}/>)
+            board.push(<Tile number = {number} xCoord = {verticalCoord[i] } yCoord = {horizontalCoord[j]}/>)
         }
     }
 
